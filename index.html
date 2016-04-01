@@ -29,7 +29,7 @@
             </div>
         </div>
         
-        <div class="container">
+        <div class="container ">
             <div>
                 <!--logo novilhoms --> 
                 <img src="img/logo_novilhoms.png" class="img-responsive center-block logo-novilhoms" alt="Logo Beef Tec">
@@ -39,23 +39,20 @@
                     <li class="list-group-item">Status do serviço <span class="glyphicon glyphicon-ok btn-lg" ng-class="service === true ? 'glyphicon glyphicon-ok btn-lg': 'glyphicon glyphicon-remove btn-lg'"></span></li>
                     <li class="list-group-item">Latência de rede <label  ng-bind="latency" class="pull-right"></label></li>
                 </ul>
-                <hr>
                 <button id="btn-access" type="button" class="btn btn-lg btn-primary btn-block" ng-disabled="service === true && internet === true ? false : true" onclick="openDeviceBrowser()">Acessar página de login
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
                 </button>
-                <br>
             </div>
-            
+            <hr>
             <!--footer -->
-            
-        </div>
-        <footer class="col-xs-12 navbar-fixed-bottom">
+            <div class="small">
                 <div class="text-center">
                     <p><span ng-bind="footerYear"></span> © Associa&ccedil;&atilde;o Sul-Matogrossense dos Produtores de Novilho Precoce - ASPNP</p>
                     <p>(67) 3324.7082 | (67) 3383.1625 | (67) 3383-9646 Rua Amazonas, Nº 2196 • Vila Célia • CEP: 79022-130 • Campo Grande.MS</p>
                   </div>
                 </div>
-            </footer>
+            </div>
+        </div>
         <!-- end footer -->
         </div>
         <script type="text/javascript" src="cordova.js"></script>
