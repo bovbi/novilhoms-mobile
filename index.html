@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+    Maia Informática
+    Fernando Maia da Mota
+    @fernandommota
+    -->
+<html ng-app="novilhomsBiMobile">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <!-- Codigos para design responsivo-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Novilho Precoce - MS</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link rel="shortcut icon" href="icon.png"/>
+
+        <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <style>
+        </style>
+    </head>
+    <body ng-controller="novilhomsBiMobileCtrl">
+        
+        <div class="modalClass" data-loading>
+            <div class="ajaxload">
+                <img src="img/ajax-loader.gif">
+            </div>
+        </div>
+        
+        <div class="container">
+            <div>
+                <!--logo novilhoms --> 
+                <img src="img/logo_novilhoms.png" class="img-responsive center-block logo-novilhoms" alt="Logo Beef Tec">
+                <hr>
+                <ul class="list-group">
+                    <li class="list-group-item">Status de acesso à internet <span class="glyphicon glyphicon-ok btn-lg" ng-class="internet === true ? 'glyphicon glyphicon-ok btn-lg': 'glyphicon glyphicon-remove btn-lg'"></span></li>
+                    <li class="list-group-item">Status do serviço <span class="glyphicon glyphicon-ok btn-lg" ng-class="service === true ? 'glyphicon glyphicon-ok btn-lg': 'glyphicon glyphicon-remove btn-lg'"></span></li>
+                    <li class="list-group-item">Latência de rede <label  ng-bind="latency" class="pull-right"></label></li>
+                </ul>
+                <hr>
+                <button id="btn-access" type="button" class="btn btn-lg btn-primary btn-block" ng-disabled="service === true && internet === true ? false : true" onclick="openDeviceBrowser()">Acessar página de login
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
+                </button>
+                <br>
+            </div>
+            
+            <!--footer -->
+            
+        </div>
+        <footer class="col-xs-12 navbar-fixed-bottom">
+                <div class="text-center">
+                    <p><span ng-bind="footerYear"></span> © Associa&ccedil;&atilde;o Sul-Matogrossense dos Produtores de Novilho Precoce - ASPNP</p>
+                    <p>(67) 3324.7082 | (67) 3383.1625 | (67) 3383-9646 Rua Amazonas, Nº 2196 • Vila Célia • CEP: 79022-130 • Campo Grande.MS</p>
+                  </div>
+                </div>
+            </footer>
+        <!-- end footer -->
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="libs/jquery/jquery-2.2.0.min.js"></script> 
+        <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        
+        <script type="text/javascript">
+            app.initialize();
+            //window.location('http://192.168.25.14:8080', '_self', 'location=no');
+            function openDeviceBrowser (){  
+                //window.open('http://192.168.0.26:8080/pentaho/api/repos/beeftecbi/app/index.html?userid=admin&password=password', '_self', 'location=no');
+                window.open('http://novilhoms.ddns.net', '_self', 'location=no');
+                //window.open('http://192.168.1.3:8080', '_self', 'location=no');
+                
+            }
+        </script>
+    </body>
+</html>
