@@ -96,7 +96,7 @@ angular.module("novilhomsBiMobile").controller("novilhomsBiMobileCtrl", function
 
     var testService = function() {
         var ts = new Date().getTime();
-        var url = "http://novilhoms.ddns.net/pentaho/content/common-ui/resources/themes/images/puc-login-logo.png?"+ts;
+        var url = "http://bi.novilhoms.com.br/bi/content/common-ui/resources/themes/images/puc-login-logo.png?"+ts;
         var img = new Image();
         img.src = url;
         $scope.service = false;
